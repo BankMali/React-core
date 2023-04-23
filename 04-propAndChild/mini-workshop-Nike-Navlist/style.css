@@ -1,0 +1,91 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* font-size: 62.5%; */
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Prompt', sans-serif;
+    background-color: #F5F5F5;
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    /* background-color: white; */
+    /* height: 100vh; */
+    /* width: 100vh; */
+}
+
+.navbar-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    background-color: white;
+    margin-top: 20px;
+    height: 60px;
+    width: 100%;
+}
+
+.navButton {
+
+    padding: 10px;
+    padding-top:22px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.navButton:hover {
+    border-bottom: 2px solid black;
+
+}
+
+.subNavbar-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    /* height: auto; */
+    padding: 0px 10px 20px 0px;
+    background-color: white;
+    width: 100%;
+}
+
+.subNavbar-container ul {
+    margin: .2rem;
+    margin-top: 1rem;
+    width: 150px;
+    /* background-color: red; */
+}
+.subNavbar-container ul h6 {
+    font-size: 16px;
+    font-weight: 400;
+    list-style-type: none;
+    padding: .5rem 0rem;
+    color: rgb(40, 40, 40)
+    /* background-color: red */
+    ;
+}
+
+.subNavbar-container ul li{
+    font-size: 14px;
+    list-style-type: none;
+    font-weight: 300;
+    margin-top: 5px;
+    color: gray;
+    /* background-color: blue; */
+
+    
+}
+

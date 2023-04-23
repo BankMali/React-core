@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 3fr repeat(5 ,1fr);
+
+    width: 400px;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica;
+    font-weight: 100;
+    border-radius: 30px;
+    box-shadow: 0px 0px 7px 4px rgba(211, 211, 211, 0.557);
+}
+
+.item--1 {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    background-color: rgb(36, 36, 40);
+    grid-column-start: 1;
+    grid-column-end: 5;
+    height: 100%;
+    border-radius: 30px 30px 0px 0px;
+    color: white;
+    font-size: 4rem;
+    padding: 1px 20px;
+}
+
+.lconner {
+    border-radius: 0px 0px 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(237, 236, 236);
+    width: 100%;
+    height: 100%;
+    border: .1px solid lightgray;
+
+}
+
+.bg1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(237, 236, 236);
+    width: 100%;
+    height: 100%;
+    border: .1px solid lightgray;
+    transition: .5s;
+
+}
+
+.bg2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 178, 178);
+    width: 100%;
+    height: 100%;
+    border: .1px solid lightgray;
+    transition: .5s;
+    
+}
+
+.bg3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(196, 196, 196);
+    width: 100%;
+    height: 100%;
+    border: .1px solid lightgray;
+    transition: .5s;
+
+}
+
+.Rconner {
+    border-radius: 0px 0px 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(230, 132, 132);
+    width: 100%;
+    height: 100%;
+    border: .1px solid lightgray;
+
+}
+
+.bg1:hover {
+    background-color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+.bg2:hover {
+    background-color: rgba(255, 255, 255);
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+.bg3:hover {
+    background-color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+.lconner:hover {
+    background-color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+.Rconner:hover {
+    background-color: rgb(245, 80, 9);
+    font-size: 1.5rem;
+    transition: 0.3s;
+}

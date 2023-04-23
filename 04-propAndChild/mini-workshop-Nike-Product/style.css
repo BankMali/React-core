@@ -1,0 +1,55 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 300;
+    /* letter-spacing: 1px; */
+    font-family: 'Prompt', sans-serif;
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(152, 31, 31); */
+    height: 100vh;
+    /* width: 100vh; */
+}
+.container_product {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    margin: 10px;
+}
+
+.imgproduct {
+    margin-bottom: 1rem;
+    width: 300px;
+}
+
+.textGray {
+    color: gray;
+}
+
+.textRed {
+    color: rgb(151, 0, 0);
+}
+
+.textPrice {
+    margin: 1rem 0rem;
+}
+
+.textDis {
+    color: rgb(0, 161, 0);
+}
