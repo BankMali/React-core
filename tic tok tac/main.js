@@ -11,18 +11,21 @@ c2: '',
 c3: '',
 }
 
-const initialTitle = 'TIC - TAC - TOE'
+const initialTitle = 'TiC-TaC-ToE'
     
     const [turn, setTurn] = React.useState(true);
-    const [isWin, setIsWin] = React.useState(false)
+    const [isWin, setIsEnd] = React.useState(false)
     const [board, setBoard] = React.useState(Int_Board);
     const [title, setTitle] = React.useState(initialTitle);
     const handleToggle = () => setBoard(!board);
     const BtnRest = (e) => {
         setBoard(Int_Board)
-        setIsWin(false)
+        setIsEnd(false)
         setTitle(initialTitle)
     }
+
+const win = [['a1','a2','a3'],['b1','b2','b3'],['c1','c2','c3'],['a1','b1','c1'],['a2','b2','c2'],['a3','b3','c3'],['a1','b2','c3'],['a3','b2','c1']];
+
 
 
     const updateBoard = (e) => {
@@ -31,7 +34,7 @@ const initialTitle = 'TIC - TAC - TOE'
         // check availble or not
             if(board[e.target.name] === '' && isWin !== true){
                 console.log('empty !!')
-                
+
                 // check if turn == true --> 'X' turn
                 // check if turn == false --> 'O' turn
                 let player
@@ -43,24 +46,44 @@ const initialTitle = 'TIC - TAC - TOE'
                 let tempBoard = {...board, [e.target.name]: player}
 
                 win.forEach(el => {
-                    console.log('to win', tempBoard[el[0]])
-                    console.log('to win', tempBoard[el[1]])
-                    console.log('to win', tempBoard[el[2]])
+                    // let Draw = {a1: ('X' || 'O') ,
+                    // a2: ('X' || 'O'),
+                    // a3: ('X' || 'O'),
+                    // b1: ('X' || 'O'),
+                    // b2: ('X' || 'O'),
+                    // b3: ('X' || 'O'),
+                    // c1: ('X' || 'O'),
+                    // c2: ('X' || 'O'),
+                    // c3: ('X' || 'O'),
+                    // };
+                    // console.log('to win', tempBoard[el[0]])
+                    // console.log('to win', tempBoard[el[1]])
+                    // console.log('to win', tempBoard[el[2]])
                     console.log('--------------- turn ', player)
                     if(player === tempBoard[el[0]] && player === tempBoard[el[1]] && player === tempBoard[el[2]]){
                         console.log(`----> player ${player} win !`)
                         // setBoard(Int_Board)
-                        setIsWin(true)
+                        setIsEnd(true)
                         setTitle(`Player ${player} win !`)
+            
+                    } else if (tempBoard.every === 'X' ) {
+                        setIsEnd(true)
+                        setTitle(`Draw`)
+
                     }
-                })
+          
+                });
+
+                // };
 
                 // toggle between turn
                 setTurn(!turn)
-            } else {
-                console.log('already placed !!')
-            }
-            console.log('on click')
+                // console.log(player)
+            } 
+            // else {
+            //     console.log('already placed !!')
+            // }
+            // console.log('on click')
     };
 
 
@@ -68,25 +91,27 @@ const initialTitle = 'TIC - TAC - TOE'
     return (
         <div className='container'>
             <h1>{title}</h1>
+        
         <div className='container-xo'>
          <button className='buttonxo' name='a1' onClick={updateBoard}>{board.a1}</button>
          <button className='buttonxo' name='a2' onClick={updateBoard}>{board.a2}</button>
          <button className='buttonxo' name='a3' onClick={updateBoard}>{board.a3}</button>
-         {/* {isShow && <h4 ></h4>} */}
+ 
         </div>
         <div className='container-xo'>
          <button className='buttonxo' name='b1' onClick={updateBoard}>{board.b1}</button>
          <button className='buttonxo' name='b2' onClick={updateBoard}>{board.b2}</button>
          <button className='buttonxo' name='b3' onClick={updateBoard}>{board.b3}</button>
-         {/* {isShow && <h4 ></h4>} */}
+  
         </div>
         <div className='container-xo'>
          <button className='buttonxo' name='c1' onClick={updateBoard}>{board.c1}</button>
          <button className='buttonxo' name='c2' onClick={updateBoard}>{board.c2}</button>
          <button className='buttonxo' name='c3' onClick={updateBoard}>{board.c3}</button>
-         {/* {isShow && <h4 ></h4>} */}
+     
         </div>
-        {isWin && <button onClick={BtnRest}> RESET</button>}
+        {/* {isWin && <button className='btnreset' onClick={BtnRest}> RESET</button>} */}
+        <button className='btnreset' onClick={BtnRest}>R e s e t</button>
         </div>
     );
 }
@@ -97,5 +122,3 @@ root.render(<App />);
 
 
 
-
-const win = [['a1','a2','a3'],['b1','b2','b3'],['c1','c2','c3'],['a1','b1','c1'],['a2','b2','c2'],['a3','b3','c3'],['a1','b2','c3'],['a3','b2','c1']];
